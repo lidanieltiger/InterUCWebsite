@@ -274,10 +274,27 @@
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Directions and Parking<br>in Los Angeles</h2>
+                    <h2 class="section-heading">Directions and Parking</h2>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6"> <!--map goes here-->
-                    <div id="map" style="width:400px;height:400px;background:yellow">
+                <div id="map" style="width:600px;height:400px;background:white">
+                    <script>
+                    function myMap() {
+                        var ucla_campus = {lat: 34.069537, lng: -118.445109};
+                        var lot11 = {lat:34.073035, lng:-118.453563};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                          zoom: 15,
+                          center: ucla_campus
+                        });
+                        var marker = new google.maps.Marker({
+                          position: lot11,
+                          map: map
+                        });
+                    }
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsCXNpX0AVNSIo5T15MK88PveixNOn_1E&callback=myMap">
+                    </script>
+                    google.maps.event.addListener(marker, 'click', function() {window.location.href = marker.url;});
                 </div>
             </div>
 
