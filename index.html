@@ -211,25 +211,25 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message" style="white-space:nowrap">
-                        <h1 id = "bigtext" style = "display:inline-block">
+                        <h1 id = "titletext" class = "animated fadeInDown" style = "display:inline-block">
                             Welcome UC 
                             <script type="text/javascript" id = "scroller">
                             new pausescroller(pausecontent, "pscroller1", "someclass", 2500)
                             </script>
                         </h1>
 
-                        <h3>2017 Inter-UC Regents Conference</h3>
+                        <h3 id = "titletext" class = "animated fadeInDown" >2017 Inter-UC Regents Conference</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <!-- TODO: THESE NEED TO BE UPDATED -->
                             <li>
-                                <a href="http://facebook.com" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Event</span></a>
+                                <a id = "intro-button1"href="http://facebook.com" class="btn btn-default btn-lg animated fadeInUp"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Event</span></a>
                             </li>
                             <li>
-                                <a href="registration.html" class="btn btn-default btn-lg"><i class="fa fa-address-card-o" style = "padding-right:5px"></i> <span class="network-name">Register</span></a>
+                                <a id = "intro-button2" href="registration.html" class="btn btn-default btn-lg animated fadeInUp"><i class="fa fa-address-card-o" style = "padding-right:5px"></i> <span class="network-name">Register</span></a>
                             </li>
                             <li>
-                                <a href="mailto:danielli9988@gmail.com" class="btn btn-default btn-lg"><i class="fa fa-envelope-o" style = "padding-right:5px"></i> <span class="network-name">Contact</span></a>
+                                <a id = "intro-button3" href="mailto:danielli9988@gmail.com" class="btn btn-default btn-lg animated fadeInUp"><i class="fa fa-envelope-o" style = "padding-right:5px"></i> <span class="network-name">Contact</span></a>
                             </li>
                         </ul>
                     </div>
@@ -257,18 +257,18 @@
                     <!--it would be cool to have an image of all the UC mascots sitting together listening to a speaker-->
                 </div>
             </div> <!-- end row -->
-            <div class = "row">
-                <div class="col-md-4">
-                    <img src="img/icons/microphone.png" alt="" class="custom-icon">
-                    <h3 class="heading">Activities</h3>
+            <div id = "testing" class = "row" >
+                <div class="col-md-3 col-md-offset-1">
+                    <img src="img/icons/microphone.png" id = "icons" alt="" class="custom-icon">
+                    <h3 class="heading" style="padding-left:20px;">Activities</h3>
                 </div>
-                <div class="col-md-4">
-                    <img src="img/icons/schedule.png" alt="" class="custom-icon">
-                    <h3 class="heading">Schedule</h3>
+                <div class="col-md-3 col-md-offset-1">
+                    <img src="img/icons/schedule.png" id = "icons" alt="" class="custom-icon">
+                    <h3 class="heading"style="padding-left:22px;">Schedule</h3>
                 </div>
-                <div class="col-md-4">
-                    <img src="img/icons/backpack.png" alt="" class="custom-icon">
-                    <h3 class="heading">Packing List</h3>
+                <div class="col-md-3 col-md-offset-1">
+                    <img src="img/icons/backpack.png" id = "icons" alt="" class="custom-icon">
+                    <h3 class="heading"style="padding-left:10px;">Packing List</h3>
                 </div>
 
         </div>
@@ -397,6 +397,24 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).scroll(function () {
+            var y = $(window).scrollTop() + $(window).height();
+            var x = $("#testing").position();
+            
+            if (y > (x.top)) { // -50 so things don't overlap
+                $(".custom-icon").addClass(
+                    "animated fadeInUp");
+                $(".custom-icon").addClass(
+                    "onfocus");
+            }
+            else {
+                $(".holder").removeClass(
+                    "animated fadeInUp");
+            }
+        });
+
+    </script>
     
 
 </body>

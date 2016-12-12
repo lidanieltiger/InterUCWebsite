@@ -22,6 +22,28 @@ h6 {
     font-size: 18px;
     font-weight: 400;
 }
+#titletext{
+    -webkit-animation-duration: 3s;
+}
+
+#icons{ /*this is for the circle icons*/
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay:0.5s;
+}
+#intro-button1{
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay:0.9s;
+}
+#intro-button2{
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay:0.7s;
+}
+#intro-button3{
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay:0.5s;
+}
+
+
 
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
@@ -58,9 +80,14 @@ h6 {
 .custom-icon{
     width: 1.5in;
     height: 1.5in;
+    opacity:0;
+}
+.custom-icon-onfocus{
+    opacity:1;
 }
 .custom-icon:hover{
     filter: brightness(50%);
+
 }
 
 @media(max-width:767px) {
