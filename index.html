@@ -247,29 +247,44 @@
 	<a  name="services"></a>
     <div class="content-section-a">
 
-        <div class="container">
+        <div id = "animatethis" class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-6">
+                <div id = "animations" class="col-lg-6 col-sm-6 animationholder">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">About this Event</h2>
-                    <p class="lead">An annual event where Regents’ scholars from across the UC campuses congregate at one campus for networking, leadership development, and team-building activities. Inter-UC Conference 2016 will be held from April 29 to May 1, 2016 on the UC Berkeley campus.</p> 
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
                     <!--it would be cool to have an image of all the UC mascots sitting together listening to a speaker-->
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div> <!-- end row -->
-            <div id = "testing" class = "row" >
-                <div class="col-md-3 col-md-offset-1">
-                    <img src="img/icons/microphone.png" id = "icons" alt="" class="custom-icon">
+            <div id = "animatethis" class = "row" >
+                <div id = "animations" class="col-md-3 col-md-offset-1 animationholder">
+                    <img src="img/icons/microphone.png" alt="" class="custom-icon" data-toggle="collapse" data-target="#demo">
                     <h3 class="heading" style="padding-left:20px;">Activities</h3>
+                    <div id="demo" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
                 </div>
-                <div class="col-md-3 col-md-offset-1">
+                <div id = "animations" class="col-md-3 col-md-offset-1 animationholder">
                     <img src="img/icons/schedule.png" id = "icons" alt="" class="custom-icon">
                     <h3 class="heading"style="padding-left:22px;">Schedule</h3>
                 </div>
-                <div class="col-md-3 col-md-offset-1">
+                <div id = "animations" class="col-md-3 col-md-offset-1 animationholder">
                     <img src="img/icons/backpack.png" id = "icons" alt="" class="custom-icon">
                     <h3 class="heading"style="padding-left:10px;">Packing List</h3>
                 </div>
+            </div>
+            <div class = "row">
+                <br>
+                <br>
+            </div>
 
         </div>
         <!-- /.container -->
@@ -286,6 +301,9 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Directions and Parking</h2>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6"> <!--map goes here-->
                 <div id="map" style="width:600px;height:400px;margin-bottom:45px;background:white">
@@ -326,48 +344,6 @@
     </div>
     <!-- /.content-section-b -->
 
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">We're Excited to See You!</h2>
-                    <p class="lead">Our Amazing Team</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/Royce.jpg" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-	<a  name="contact"></a> <!-- going to have that cool map thing here-->
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Misc./FAQ - packing list, food, etc.</h2>
-                </div>
-                <div class="col-lg-6">
-                <!--put stuff here-->
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -400,12 +376,12 @@
     <script>
         $(document).scroll(function () {
             var y = $(window).scrollTop() + $(window).height();
-            var x = $("#testing").position();
+            var x = $("#animatethis").position();
             
             if (y > (x.top)) { // -50 so things don't overlap
-                $(".custom-icon").addClass(
+                $(".animationholder").addClass(
                     "animated fadeInUp");
-                $(".custom-icon").addClass(
+                $(".animationholder").addClass(
                     "onfocus");
             }
             else {

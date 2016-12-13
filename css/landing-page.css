@@ -23,13 +23,9 @@ h6 {
     font-weight: 400;
 }
 #titletext{
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 2s;
 }
 
-#icons{ /*this is for the circle icons*/
-    -webkit-animation-duration: 2s;
-    -webkit-animation-delay:0.5s;
-}
 #intro-button1{
     -webkit-animation-duration: 2s;
     -webkit-animation-delay:0.9s;
@@ -43,6 +39,9 @@ h6 {
     -webkit-animation-delay:0.5s;
 }
 
+#animations{ /*this is for the about section*/
+    -webkit-animation-duration: 1.5s;
+}
 
 
 .intro-header {
@@ -80,14 +79,16 @@ h6 {
 .custom-icon{
     width: 1.5in;
     height: 1.5in;
-    opacity:0;
-}
-.custom-icon-onfocus{
-    opacity:1;
 }
 .custom-icon:hover{
     filter: brightness(50%);
 
+}
+.animationholder{
+    opacity:0;
+}
+.animation-holder-onfocus{
+    opacity:1;
 }
 
 @media(max-width:767px) {
