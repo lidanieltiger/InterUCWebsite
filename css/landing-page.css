@@ -24,6 +24,11 @@ h6 {
 }
 #titletext{
     -webkit-animation-duration: 2s;
+    margin-left: 15%;
+}
+
+#subtitle{
+    -webkit-animation-duration: 2s;
 }
 
 #intro-button1{
