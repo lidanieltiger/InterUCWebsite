@@ -91,7 +91,7 @@
                 else if (document.getElementById) //if legacy DOM browsers, just start scroller after 0.5 sec
                 setTimeout(function(){scrollerinstance.initialize()}, 500)
             }
-    
+
 
         // -------------------------------------------------------------------
         // initialize()- Initialize scroller method.
@@ -195,24 +195,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <!--
                     <li>
-                        <a href="registration.html">Register</a>
+                        <a href="registration.html" style="color: #E0F7FA;">Register</a>
                     </li>
-                    -->
                     <li>
                         <a href="Schedule.html" style="color: #E0F7FA;">Schedule</a>
                     </li>
-                    <!--
                     <li>
-                        <a href="parking.html">Parking</a>
+                        <a href="parking.html" style="color: #E0F7FA;">Parking</a>
                     </li>
-                    -->
-                    <!--
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html" style="color: #E0F7FA;">Contact</a>
                     </li>
-                    -->
                     <li>
                         <a href="http://www.rssla.org" style="color: #E0F7FA;">RSSLA</a>
                     </li>
@@ -232,7 +226,7 @@
                 <div class="col-lg-12">
                     <div class="intro-message" style="white-space:nowrap">
                         <h1 id = "titletext" class = "animated fadeInDown" style = "display:inline-block">
-                            Welcome 
+                            Welcome
                             <script type="text/javascript" id = "scroller">
                             new pausescroller(pausecontent, "pscroller1", "someclass", 2500)
                             </script>
@@ -276,7 +270,7 @@
                     <h2 class="section-heading">About this Event</h2>
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <!--it would be cool to have an image of all the UC mascots sitting together listening to a speaker-->
                     <br>
                     <br>
@@ -331,7 +325,7 @@
                         google.maps.event.addDomListener(window, "resize", function() {
                            var center = map.getCenter();
                            google.maps.event.trigger(map, "resize");
-                           map.setCenter(center); 
+                           map.setCenter(center);
                         });
 
                         var marker = new google.maps.Marker({ //TODO: make it so that hovering over the icon says like lot 11
@@ -345,7 +339,7 @@
                             }
                         });
 
-                    }  
+                    }
                     </script>
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsCXNpX0AVNSIo5T15MK88PveixNOn_1E&callback=myMap">
                     </script>
@@ -399,7 +393,7 @@
         $(document).scroll(function () {
             var y = $(window).scrollTop() + $(window).height();
             var x = $("#animatethis").position();
-            
+
             if (y > (x.top)) { // -50 so things don't overlap
                 $(".animationholder").addClass(
                     "animated fadeInUp");
@@ -413,7 +407,7 @@
         });
 
     </script>
-    
+
 
 </body>
 
