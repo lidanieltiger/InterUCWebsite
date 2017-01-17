@@ -2,6 +2,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 body,
@@ -59,7 +60,7 @@ h6 {
 .intro-message {
     position: relative;
     padding-top: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 17%;
 }
 
 .intro-message > h1 {
@@ -80,8 +81,8 @@ h6 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 .custom-icon{
-    width: 1.5in;
-    height: 1.5in;
+    width: 40%;
+    height: 40%;
 }
 .custom-icon:hover{
     filter: brightness(50%);
