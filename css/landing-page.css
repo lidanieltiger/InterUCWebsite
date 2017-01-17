@@ -16,6 +16,9 @@ h6 {
 }
 .topnav {
     font-size: 14px; 
+    background-color: #424242;
+    background: #424242;
+    border-color: #424242;
 }
 
 .lead {
