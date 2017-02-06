@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>LA 2017</title>
     <!-- Favicon -->
@@ -32,27 +34,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-
     /*Example CSS for the two demo scrollers*/
-
     #pscroller1{
     width: 500px;
     height: 85px;
-    padding-top:8px;
+    padding-top:0px;
     text-align:left;
     vertical-align:top;
     display:inline-block;
     }
-
     .someclass{ //class to apply to your scroller(s) if desired
     }
-
     </style>
 
     <script type="text/javascript">
-
     /*Example message arrays for the two demo scrollers*/
-
     var pausecontent=new Array()
     pausecontent[0]='UC Los Angeles'
     pausecontent[1]='UC Berkeley'
@@ -61,11 +57,10 @@
     pausecontent[4]='UC Irvine'
     pausecontent[5]='UC Santa Cruz'
     pausecontent[6]='UC Riverside'
-
     </script>
 
     <script type="text/javascript">
-        if( /webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             //Do something for MOBILE
             //alert("MOBILE");
         }else
@@ -89,13 +84,10 @@
                 else if (document.getElementById) //if legacy DOM browsers, just start scroller after 0.5 sec
                 setTimeout(function(){scrollerinstance.initialize()}, 500)
             }
-
-
         // -------------------------------------------------------------------
         // initialize()- Initialize scroller method.
         // -Get div objects, set initial positions, start up down animation
         // -------------------------------------------------------------------
-
         pausescroller.prototype.initialize=function(){
         this.tickerdiv=document.getElementById(this.tickerid)
         this.visiblediv=document.getElementById(this.tickerid+"1")
@@ -112,12 +104,9 @@
         window.attachEvent("onunload", function(){scrollerinstance.tickerdiv.onmouseover=scrollerinstance.tickerdiv.onmouseout=null})
         setTimeout(function(){scrollerinstance.animateup()}, this.delay)
         }
-
-
         // -------------------------------------------------------------------
         // animateup()- Move the two inner divs of the scroller up and in sync
         // -------------------------------------------------------------------
-
         pausescroller.prototype.animateup=function(){
         var scrollerinstance=this
         if (parseInt(this.hiddendiv.style.top)>(this.visibledivtop+5)){
@@ -131,26 +120,21 @@
         setTimeout(function(){scrollerinstance.setmessage()}, this.delay)
         }
         }
-
         // -------------------------------------------------------------------
         // swapdivs()- Swap between which is the visible and which is the hidden div
         // -------------------------------------------------------------------
-
         pausescroller.prototype.swapdivs=function(){
         var tempcontainer=this.visiblediv
         this.visiblediv=this.hiddendiv
         this.hiddendiv=tempcontainer
         }
-
         pausescroller.prototype.getinline=function(div1, div2){
         div1.style.top=this.visibledivtop+"px"
         div2.style.top=Math.max(div1.parentNode.offsetHeight, div1.offsetHeight)+"px"
         }
-
         // -------------------------------------------------------------------
         // setmessage()- Populate the hidden div with the next message before it's visible
         // -------------------------------------------------------------------
-
         pausescroller.prototype.setmessage=function(){
         var scrollerinstance=this
         if (this.mouseoverBol==1) //if mouse is currently over scoller, do nothing (pause it)
@@ -163,7 +147,6 @@
         this.animateup()
         }
         }
-
         pausescroller.getCSSpadding=function(tickerobj){ //get CSS padding value, if any
         if (tickerobj.currentStyle)
         return tickerobj.currentStyle["paddingTop"]
@@ -194,16 +177,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="registration.html" style="color: #E0F7FA;">Register</a>
-                    </li>
-                    <li>
-                        <a href="schedule.html" style="color: #E0F7FA;">Schedule</a>
+                        <a href="Schedule.html" style="color: #E0F7FA;">Schedule</a>
                     </li>
                     <li>
                         <a href="parking.html" style="color: #E0F7FA;">Parking</a>
-                    </li>
-                    <li>
-                        <a href="contact.html".html" style="color: #E0F7FA;">Contact</a>
                     </li>
                     <li>
                         <a href="http://www.rssla.org" style="color: #E0F7FA;">RSSLA</a>
@@ -222,8 +199,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="intro-message" style="white-space:nowrap; overflow:hidden">
-                        <h1 id = "titletext" class = "animated fadeInDown" style = "display:inline-block;">
+                    <div class="intro-message" style="white-space:nowrap">
+                        <h1 id = "titletext" class = "animated fadeInDown" style = "display:inline-block">
                             Welcome
                             <script type="text/javascript" id = "scroller">
                             new pausescroller(pausecontent, "pscroller1", "someclass", 2500)
@@ -257,7 +234,7 @@
 
     <!-- Page Content -->
 
-	<a  name="services"></a>
+    <a  name="services"></a>
     <div class="content-section-a">
 
         <div id = "animatethis" class="container">
@@ -278,7 +255,7 @@
             <div id = "animatethis" class = "row" >
                 <div id = "animations" class="col-md-3 col-md-offset-1 col-xs-24 col-xs-offset-3 animationholder">
                     <img src="img/icons/microphone.png" id = "icons" class="custom-icon">
-                    <h3 class="heading" style="padding-left:20px;"><a href = "https://drive.google.com/open?id=1sLmGaYw6SShgkcwQF-WrlRdtslo&usp=sharing">Westwood</a></h3>
+                    <h3 class="heading" style="padding-left:20px;">Activities</h3>
                 </div>
                 <div id = "animations" class="col-md-3 col-md-offset-1 col-xs-24 col-xs-offset-3 animationholder">
                     <img src="img/icons/schedule.png" id = "icons" class="custom-icon">
@@ -325,7 +302,6 @@
                            google.maps.event.trigger(map, "resize");
                            map.setCenter(center);
                         });
-
                         var marker = new google.maps.Marker({ //TODO: make it so that hovering over the icon says like lot 11
                           position: lot11,
                           draggable: false,
@@ -336,7 +312,6 @@
                                 scaledSize: new google.maps.Size(40, 40)
                             }
                         });
-
                     }
                     </script>
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsCXNpX0AVNSIo5T15MK88PveixNOn_1E&callback=myMap">
@@ -391,7 +366,6 @@
         $(document).scroll(function () {
             var y = $(window).scrollTop() + $(window).height();
             var x = $("#animatethis").position();
-
             if (y > (x.top)) { // -50 so things don't overlap
                 $(".animationholder").addClass(
                     "animated fadeInUp");
@@ -403,7 +377,6 @@
                     "animated fadeInUp");
             }
         });
-
     </script>
 
 
