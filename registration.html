@@ -1,123 +1,126 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title>Register</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post to Google Sheet Demo</title>
+  <!-- bootstrap & fontawesome css -->
+  <link href="http://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+  <!-- BootstrapValidator CSS -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- jQuery and Bootstrap JS -->
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <!-- BootstrapValidator JS -->
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+  
+  <!-- Animated Loading Icon -->
+  <style type="text/css">
+  .glyphicon-refresh-animate {
+      -animation: spin .7s infinite linear;
+      -webkit-animation: spin2 .7s infinite linear;
+  }
+
+  @-webkit-keyframes spin2 {
+      from { -webkit-transform: rotate(0deg);}
+      to { -webkit-transform: rotate(360deg);}
+  }
+
+  @keyframes spin {
+      from { transform: scale(1) rotate(0deg);}
+      to { transform: scale(1) rotate(360deg);}
+  }
+  </style>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="index.html">Home</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Register</a>
-                    </li>
-                    <li>
-                        <a href="schedule.html">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="parking.html">Parking</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">RSSLA</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+</head>
 
-<div class="container" style ="margin-top:50px;">
-<div class="page-header">
-    <h1>Registration Form</h1>
-</div>
-
-<!-- Registration form - START -->
-<div class="container">
-    <div class="row">
-        <form role="form">
-            <div class="col-lg-6">
-                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"style="padding-right:8px;"></span>Required Field</strong></div>
-                <div class="form-group">
-                    <label for="InputName">Enter Name</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                  <label for="School">Select School:</label>
-                  <select class="form-control" id="sel1">
-                    <option selected="selected" disabled="disabled">Select a School</option>
-                    <option>UCLA</option>
-                    <option>UC Berkeley</option>
-                    <option>UC San Diego</option>
-                    <option>UC Irvine</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                    <label for="InputEmail">Enter Email</label>
-                    <div class="input-group">
-                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="InputEmail">Confirm Email</label>
-                    <div class="input-group">
-                        <input type="email" class="form-control" id="InputEmailSecond" name="InputEmail" placeholder="Confirm Email" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="InputMessage">Comments, Concerns</label>
-                    <div class="input-group">
-                        <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                    </div>
-                </div>
-                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-            </div>
-        </form>
-        <div class="col-lg-5 col-md-push-1">
-            <div class="col-md-12">
-                <div class="alert alert-success">
-                    <strong><span class="glyphicon glyphicon-ok"></span> Success! Confirmation emails will be sent shortly.</strong>
-                </div>
-                <div class="alert alert-danger">
-                    <span class="glyphicon glyphicon-remove"></span><strong> Error! Please check all page inputs.</strong>
-                </div>
-            </div>
-        </div>
+<body>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Post to Google Sheets with form validation</h2>
+      <p>
+      Based on Martin Hawksey's <a href="http://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/" target="_blank">example</a>.
+      <p>
     </div>
-</div>
-<!-- Registration form - END -->
+  </div>
+  <hr>
+  <form class="form-horizontal" role="form" id="test-form">
+    <div class="form-group">
+      <label class="col-lg-3 control-label">First Name</label>
+      <div class="col-lg-3 inputGroupContainer">
+        <div class="input-group">
+          <input type="text" class="form-control" name="firstName" placeholder="First Name"/>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <div class="form-group">
+      <label class="col-lg-3 control-label">Last Name</label>
+      <div class="col-lg-3 inputGroupContainer">
+        <div class="input-group">
+          <input type="text" class="form-control" name="lastName" placeholder="Last Name"/>
+        </div>
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label class="col-lg-3 control-label">Email</label>
+      <div class="col-lg-3 inputGroupContainer">
+        <div class="input-group">
+          <input type="text" class="form-control" name="email" placeholder="name@domain.com"/>
+        </div>
+      </div>
+    </div>
+
+    <div class ="form-group">
+      <label class="col-lg-3 control-label">School</label>
+        <div class ="col-lg-3 inputGroupContainer">
+          <select type="text" class="form-control" name="school" >
+            <option></option>
+            <option>UCLA</option>
+            <option>UC Berkeley</option>
+            <option>UC San Diego</option>
+            <option>UC Irvine</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-3 control-label">Address</label>
+      <div class="col-lg-3 inputGroupContainer">
+        <div class="input-group col-lg-10">
+          <textarea type="text" class="form-control" name="address" placeholder="Enter your address here" rows="4" style="resize: vertical;"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-3 control-label">Notes</label>
+      <div class="col-lg-3 inputGroupContainer">
+        <div class="input-group col-lg-10">
+          <textarea type="text" class="form-control" name="notes" placeholder="Comments or questions?" rows="4" style="resize: vertical;"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-9 col-lg-offset-3">
+        <button type="submit" class="btn btn-default" id="postForm">Submit</button>
+      </div>
+    </div>
+
+  </form>
+
+  </div>
 </body>
+
+<footer>
+<script src="validation-functions.js"></script>
+</footer>
+
 </html>
