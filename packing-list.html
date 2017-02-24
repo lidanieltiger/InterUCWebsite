@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Packing List</title>
+    <link rel='stylesheet' href='css/packing-list.css'/>
+    <script type="text/javascript" src="js/packing-list.js"></script>
+  </head>
+  <body>
+    <header class='speaker-form-header'>
+      <h1>Packing List</h1>
+      <p><em>A list of everything you need for your trip!</em></p>
+      <br>
+      <h5><a href="img/Info/InterUCPackinglist.pdf">Printable Version</a></h5>
+    </header>
+    <p id='complete'><br></p>
+    <div class='form-row'>
+    <ul>
+      <li><label class='checkbox-label' for='backpack'>
+        <input id='backpack'
+            name='backpack'
+            type='checkbox'
+            value='Backpack'
+            onclick='change("backpack")'/>
+       <span id='backpack-text'>Backpack</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='water-bottle'>
+        <input id='water-bottle'
+            name='water-bottle'
+            type='checkbox'
+            value='Reusable Water Bottle'
+            onclick='change("water-bottle")'/>
+       <span id='water-bottle-text'>Reusable Water Bottle</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='sleeping-bag'>
+        <input id='sleeping-bag'
+            name='sleeping-bag'
+            type='checkbox'
+            value='Sleeping Bag (optional: yoga mat/airpad)'
+            onclick='change("sleeping-bag")'/>
+       <span id='sleeping-bag-text'>Sleeping Bag (optional: yoga mat/airpad)</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='toiletries'>
+        <input id='toiletries'
+            name='toiletries'
+            type='checkbox'
+            value='Toiletries'
+            onclick='change("toiletries")'/>
+       <span id='toiletries-text'>Toiletries</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='sunglasses'>
+        <input id='sunglasses'
+            name='sunglasses'
+            type='checkbox'
+            value='Sunglasses'
+            onclick='change("sunglasses")'/>
+       <span id='sunglasses-text'>Sunglasses</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='sunscreen'>
+        <input id='sunscreen'
+            name='sunscreen'
+            type='checkbox'
+            value='Sunscreen'
+            onclick='change("sunscreen")'/>
+       <span id='sunscreen-text'>Sunscreen</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='student-id'>
+        <input id='student-id'
+            name='student-id'
+            type='checkbox'
+            value='Student ID'
+            onclick='change("student-id")'/>
+       <span id='student-id-text'>Student ID</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='waivers'>
+        <input id='waivers'
+            name='waivers'
+            type='checkbox'
+            value='Waivers'
+            onclick='change("waivers")'/>
+       <span id='waivers-text'>Waivers</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='prescribed-medications'>
+        <input id='prescribed-medications'
+            name='prescribed-medications'
+            type='checkbox'
+            value='Prescribed Medications'
+            onclick='change("prescribed-medications")'/>
+       <span id='prescribed-medications-text'>Prescribed Medications</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='snacks'>
+        <input id='snacks'
+            name='snacks'
+            type='checkbox'
+            value='Snacks'
+            onclick='change("snacks")'/>
+       <span id='snacks-text'>Snacks</span>
+      </label></li>
+      <br>
+      <li><label class='checkbox-label' for='money'>
+        <input id='money'
+            name='money'
+            type='checkbox'
+            value='Money (for souvenirs, food)'
+            onclick='change("money")'/>
+       <span id='money-text'>Money (for souvenirs, food)</span>
+      </label></li>
+    </ul>
+    </div>
+  </body>
+</html>
