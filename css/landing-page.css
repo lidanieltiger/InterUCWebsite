@@ -73,6 +73,10 @@ h6 {
     width: 100%;
 }
 
+#pscroller1 {
+    width: 60%;
+}
+
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
@@ -105,6 +109,10 @@ h6 {
     .intro-message > h1 {
         font-size: 3em;
         text-align: center;
+    }
+
+    #pscroller1 {
+        width: 100%;
     }
 
     ul.intro-social-buttons > li {
